@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Yana 🤍</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(255,214,186,.28),transparent 24%),
+    radial-gradient(circle at 85% 20%,rgba(255,173,186,.24),transparent 28%),
+    radial-gradient(circle at 50% 100%,rgba(123,28,54,.38),transparent 40%),
+    linear-gradient(180deg,#19070d 0%,#3b0f1f 48%,#12060b 100%);
+  color:#fff7ef;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+.stars{
+  position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffd6ba 1px,transparent 1px);
+  background-size:80px 80px,150px 150px;
+  background-position:0 0,40px 60px;
+  opacity:.18;
+  animation:starsMove 28s linear infinite;
+}
+@keyframes starsMove{from{transform:translateY(0)}to{transform:translateY(-140px)}}
+main{position:relative;z-index:2}
+.container{width:min(92%,860px);margin:0 auto;padding:55px 0}
+.hero{
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:45px 20px;
+}
+.hero-inner{max-width:780px}
+.top{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  opacity:.7;
+}
+h1{
+  font-size:clamp(50px,10vw,92px);
+  font-weight:400;
+  margin:10px 0 20px;
+  line-height:1.05;
+}
+.subtitle{
+  color:#ffe9dc;
+  font-size:clamp(16px,2vw,19px);
+  max-width:700px;
+  margin:0 auto 34px;
+}
+.music-box{
+  margin:34px auto 0;
+  padding:18px 20px;
+  max-width:470px;
+  border-radius:22px;
+  background:rgba(255,248,239,.10);
+  border:1px solid rgba(255,222,196,.25);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+.music-box p{margin:0 0 12px;font-size:14px;color:#ffe8dc}
+.music-box audio{width:100%}
+.scroll-btn{
+  display:inline-block;
+  margin-top:34px;
+  padding:13px 26px;
+  border-radius:999px;
+  color:#2a0b13;
+  text-decoration:none;
+  background:linear-gradient(135deg,#ffd6ba,#fff1df);
+  border:1px solid rgba(255,255,255,.35);
+  transition:.3s ease;
+  font-size:15px;
+}
+.scroll-btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.chapter{
+  margin:42px 0;
+  padding:clamp(30px,5vw,58px);
+  border-radius:30px;
+  background:rgba(255,248,239,.09);
+  border:1px solid rgba(255,222,196,.24);
+  box-shadow:0 35px 90px rgba(0,0,0,.42);
+  backdrop-filter:blur(14px);
+}
+.chapter-number{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  opacity:.58;
+  margin-bottom:8px;
+  color:#ffd6ba;
+}
+.chapter h2{
+  font-size:clamp(34px,6vw,58px);
+  font-weight:400;
+  margin:0 0 28px;
+  line-height:1.18;
+}
+.chapter p{
+  margin:0 0 24px;
+  font-size:clamp(16px,2vw,19px);
+  color:#fff7ef;
+}
+.quote{
+  margin:38px 0;
+  padding:28px;
+  border-left:3px solid #ffd6ba;
+  background:linear-gradient(135deg,rgba(255,214,186,.17),rgba(255,255,255,.055));
+  border-radius:20px;
+  font-size:clamp(21px,3vw,30px);
+  line-height:1.5;
+  color:#fffaf5;
+}
+.future-list{
+  display:grid;
+  gap:14px;
+  margin-top:28px;
+}
+.future-item{
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(255,248,239,.105);
+  border:1px solid rgba(255,214,186,.2);
+  font-size:clamp(16px,2vw,18px);
+}
+.ending{
+  text-align:center;
+  padding:80px 20px 60px;
+}
+.ending h2{
+  font-size:clamp(42px,8vw,78px);
+  font-weight:400;
+  margin:0 0 18px;
+}
+.ending p{
+  max-width:700px;
+  margin:0 auto 20px;
+  font-size:clamp(17px,2vw,20px);
+  color:#ffe8dc;
+}
+.signature{display:block;margin-top:34px;opacity:.8}
+.fade{
+  opacity:0;
+  transform:translateY(24px);
+  transition:all .9s ease;
+}
+.fade.show{opacity:1;transform:translateY(0)}
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:rgba(255,214,186,.65);
+  font-size:18px;
+  animation:floatUp 7s linear forwards;
+  pointer-events:none;
+  z-index:1;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) scale(1);opacity:0}
+  15%{opacity:.8}
+  100%{transform:translateY(-110vh) scale(1.8);opacity:0}
+}
+@media(max-width:600px){
+  .container{padding:30px 0}
+  .hero{min-height:92vh}
+  .chapter{border-radius:22px}
+  .quote{padding:22px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner fade">
+    <p class="top">A letter from someone who still loves you</p>
+
+    <h1>For Yana 🤍</h1>
+
+    <p class="subtitle">
+      I tahu surat ni takkan ubah apa-apa. I pun tak berharap macam tu.
+      I cuma nak you tahu apa yang hati I cuba simpan selama ni,
+      tapi tak pernah pandai nak luahkan dengan betul. 🤍
+    </p>
+
+    <div class="music-box">
+      <p>Play this while reading — Lyodra, Afgan “Ada” 🤍</p>
+      <audio controls>
+        <source src="ada.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <a href="#chapter-1" class="scroll-btn">Start reading</a>
+  </div>
+</section>
+
+<div class="container">
+
+<section class="chapter fade" id="chapter-1">
+  <div class="chapter-number">Chapter 01</div>
+  <h2>I’m Sorry</h2>
+
+  <p>Hi sayang,</p>
+
+  <p>
+    I dah baca balik semua chat kita. Semakin I baca,
+    semakin I sedar yang sebenarnya bukan you yang tak cuba.
+  </p>
+
+  <p>
+    You dah bagi reassurance. You dah cuba faham I. You dah cari masa untuk I.
+    You dah dengar benda yang sama berulang kali, walaupun I tahu semua tu penat untuk you.
+  </p>
+
+  <p>
+    And for that, thank you.
+  </p>
+
+  <p>
+    I minta maaf sebab bila I sakit, I selalu luahkan sakit tu dengan cara
+    yang buat you rasa macam usaha you tak pernah cukup.
+  </p>
+
+  <div class="quote">
+    You were never the problem.
+  </div>
+
+  <p>
+    Sakit I bukan sebab you tak cukup baik. Bukan sebab you tak cukup sayang.
+    And bukan sebab reassurance you tak bermakna.
+  </p>
+
+  <p>
+    Semua yang you cakap sampai dekat hati I. I cuma tak pandai nak terima hakikat semuanya
+    dengan tenang bila hati I sendiri tengah terlalu luka sakit.
+  </p>
+</section>
+
+<section class="chapter fade" id="chapter-2">
+  <div class="chapter-number">Chapter 02</div>
+  <h2>The Truth</h2>
+
+  <p>
+    Yes, I tahu mungkin dari luar I nampak kuat.
+    I nampak macam boleh tahan semua benda, macam boleh handle everything sendiri.
+  </p>
+
+  <p>
+    Tapi truth is, I sebenarnya sangat lemah.
+    Lebih lemah daripada apa yang I pernah tunjuk dekat you.
+  </p>
+
+  <p>
+    Bila dunia I rasa berat, orang pertama yang I cari dalam hati I ialah you.
+    Bila I penat, I cuma nak you ada.
+    Bila I takut, I cuma nak rasa you pegang I and yakinkan I yang semuanya akan okay.
+  </p>
+
+  <p>
+    Maybe sebab tu I selalu nampak macam terlalu perlukan you.
+    Bukan sebab I nak letak beban dekat you.
+    Tapi sebab dengan you, I rasa tenang.
+  </p>
+
+  <p>
+    You jadi tempat yang hati I selalu nak balik.
+  </p>
+
+  <p>
+    Kepala I faham semua yang you cakap.
+    Tapi hati I masih belum cukup kuat untuk terima realiti yang ada sekarang.
+  </p>
+
+  <p>
+    Setiap kali I nampak atau teringat semua benda yang melibatkan dia dengan you,
+    hati I jatuh balik.
+  </p>
+
+  <p>
+    And honestly, I rasa tewas.
+  </p>
+
+  <p>
+    Tewas sebab I dah penat melawan perasaan sendiri setiap kali realiti tu muncul depan mata I.
+  </p>
+
+  <p>
+    I tewas bila I sedar hati I masih sakit setiap kali dia ada dengan you,
+    walaupun I tahu you dah cuba yakinkan I berkali-kali.
+  </p>
+
+  <p>
+    Bukan sebab I nak salahkan you. Bukan sebab I nak benci dia.
+    Tapi sebab dalam hati I, I pernah bayangkan semua benda tu berlaku dengan you.
+  </p>
+
+  <div class="quote">
+    I rasa tewas, sayang.<br>
+    because I still love you too much in a reality I haven’t learned to accept.
+  </div>
+</section>
+
+<section class="chapter fade" id="chapter-3">
+  <div class="chapter-number">Chapter 03</div>
+  <h2>The Future I Still See</h2>
+
+  <p>
+    I tahu you pernah cakap you nak future dengan I.
+    You pernah cakap you akan tunggu I.
+    You pernah cakap you cintakan I.
+  </p>
+
+  <p>
+    Percayalah, semua ayat tu I simpan.
+    Kadang-kadang ayat tu yang buat I rasa kuat sekejap.
+  </p>
+
+  <p>
+    Tapi dalam masa yang sama, I takut.
+    Takut kalau versi I yang sekarang ni cuma akan terus melukakan orang yang I paling nak bahagiakan.
+  </p>
+
+  <p>
+    I tak pernah berhenti bayangkan future dengan you, Yana.
+    Mungkin itu yang buat semua ni lagi berat.
+  </p>
+
+  <p>
+    Sebab bagi I, future tu bukan benda besar pun.
+    I cuma bayangkan benda-benda kecil yang tenang.
+  </p>
+
+  <div class="future-list">
+    <div class="future-item">Balik kerja and cerita pasal hari masing-masing.</div>
+    <div class="future-item">Pergi grocery sama-sama.</div>
+    <div class="future-item">Sambut birthday you setiap tahun.</div>
+    <div class="future-item">Ambil gambar random walaupun hari biasa je.</div>
+    <div class="future-item">Gaduh manja, then pujuk balik sebab kita tetap pilih each other.</div>
+    <div class="future-item">Jadi rumah untuk satu sama lain bila dunia rasa berat.</div>
+  </div>
+
+  <p style="margin-top:28px;">
+    Dalam semua bayangan tu, orangnya tetap you.
+  </p>
+
+  <p>
+    Sebab tu I sakit. Bukan sebab I tak percaya you.
+  </p>
+
+  <p>
+    I masih simpan impian tu, sayang.
+    I masih nak percaya yang satu hari nanti mungkin kita boleh sampai ke sana.
+  </p>
+
+  <div class="quote">
+    I still want that future too.<br>
+    I just don’t want to reach it with a heart that keeps hurting you.
+  </div>
+
+  <p>
+    Tapi buat masa sekarang, I kena jujur...
+    hati I belum cukup kuat untuk boleh terima yang you sekarang bukan untuk I.
+  </p>
+</section>
+
+<section class="chapter fade" id="chapter-4">
+  <div class="chapter-number">Chapter 04</div>
+  <h2>Why I Blocked You</h2>
+
+  <p>
+    I nak you tahu, I block WhatsApp you bukan sebab I benci.
+    Bukan sebab I marah.
+    Bukan sebab I dah tak cintakan you.
+  </p>
+
+  <p>
+    I block sebab I sedar cara I bercakap dengan you dah kasar.
+    Dulu I nak jadi tempat yang tenangkan you.
+  </p>
+
+  <p>
+    Tapi sekarang, bila hati I sakit, I mula bercakap dari tempat yang penuh luka.
+    I cakap benda yang bukan diri I.
+  </p>
+
+  <p>
+    And yang paling I menyesal,
+    orang yang paling banyak terkena luka daripada kata-kata I ialah you.
+    Orang yang paling I sayang.
+  </p>
+
+  <p>
+    I tak boleh terima bila dia always ada dengan you.
+    I cuba kuat, I cuba matang, I cuba faham.
+    Tapi ada bahagian dalam diri I yang masih belum mampu terima semua tu.
+  </p>
+
+  <p>
+    And bila I tak mampu terima, I jadi sakit.
+    Bila I sakit, I bercakap kasar.
+    Bila I bercakap kasar, I sakitkan you.
+  </p>
+
+  <div class="quote">
+    I don’t want to become someone who hurts you<br>
+    just because I don’t know how to heal myself yet.
+  </div>
+
+  <p>
+    Sebab tu maybe I kena rawat diri I dulu.
+    I kena belajar terima semua ni tanpa melepaskan sakit tu dekat you.
+  </p>
+
+  <p>
+    I tak tahu sampai bila.
+    Maybe sekejap. Maybe lama.
+    I sendiri tak ada jawapan.
+  </p>
+
+  <p>
+    Tapi mungkin dengan cara ni, kita berdua tak sesakit sekarang.
+    You tak terus terluka dengan kata-kata I.
+    And I pun tak terus rosak sebab melawan perasaan sendiri setiap hari.
+  </p>
+</section>
+
+<section class="chapter fade" id="chapter-5">
+  <div class="chapter-number">Chapter 05</div>
+  <h2>If One Day</h2>
+
+  <p>
+    Kalau satu hari nanti I kembali,
+    I harap I kembali sebagai seseorang yang lebih tenang.
+  </p>
+
+  <p>
+    Bukan seseorang yang penuh marah.
+    Bukan seseorang yang bercakap dari luka.
+    Bukan seseorang yang buat you rasa bersalah setiap kali you cuba jaga hati I.
+  </p>
+
+  <p>
+    I nak kembali sebagai seseorang yang boleh sayang you dengan lebih baik.
+    Dengan lebih lembut.
+    Dengan lebih matang.
+  </p>
+
+  <p>
+    I tak nak janji bila semuanya akan okay,
+    sebab I tak nak bagi janji yang I sendiri belum pasti.
+  </p>
+
+  <p>
+    Tapi satu perkara yang I pasti...
+  </p>
+
+  <div class="quote">
+    I masih cintakan you.
+  </div>
+
+  <p>
+    And kalau you betul-betul masih tunggu I,
+    I harap you tahu yang I bukan pergi sebab I tak nampak future dengan you.
+  </p>
+
+  <p>
+    I pergi sekejap sebab I masih nampak future tu.
+    And I tak nak future tu hancur sebab diri I.
+  </p>
+
+  <p>
+    Terima kasih sebab pernah yakinkan I.
+    Terima kasih sebab masih cintakan I walaupun I susah.
+    Terima kasih sebab masih nampak future dengan I,
+    walaupun I sendiri kadang-kadang tak nampak diri I dengan jelas.
+  </p>
+
+  <p>
+    Tolong jangan fikir usaha you tak cukup.
+    You dah cuba.
+    You dah bagi lebih daripada apa yang I layak terima.
+  </p>
+
+  <p>
+    Yang tewas bukan you.
+    Yang tewas cuma hati I yang belum pandai sembuh.
+  </p>
+</section>
+
+<section class="ending fade">
+  <h2>I love you, Yana.</h2>
+
+  <p>
+    Eeven in the hardest part,
+    my heart still knows your name.
+  </p>
+
+  <p>
+    I don’t know how long I need to heal.
+    But I hope when that day comes,
+    I can love you without hurting you.
+  </p>
+
+  <p>
+    And maybe then,
+    kita berdua dah tak sesakit sekarang.
+  </p>
+
+  <p>
+    Sebab kalau ada satu future yang I masih simpan dalam hati...
+    future tu masih ada you. I harap you masih akan cintakan I.
+  </p>
+
+  <span class="signature">— Hans 🤍</span>
+</section>
+
+</div>
+</main>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+fades.forEach(el => observer.observe(el));
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = '♥';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (Math.random() * 12 + 12) + 'px';
+  heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 8000);
+}
+
+setInterval(createHeart, 1800);
+</script>
+
+</body>
+</html>
